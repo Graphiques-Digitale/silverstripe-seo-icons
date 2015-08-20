@@ -1,0 +1,27 @@
+{
+  "name": "graphiques-digitale/silverstripe-seo-icons",
+  "description": "Enhanced SEO favicon and touch icon module for the SilverStripe framework",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/Graphiques-Digitale/silverstripe-seo-icons",
+  "keywords": ["silverstripe", "seo", "metadata", "module", "search engine", "optimisation", "optimization", "favicon", "touch icon"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {"name": "Andrew Gerber","email": "atari@graphiquesdigitale.net"}
+  ],
+  "support": {
+    "issues": "http://github.com/your-vendor-name/module-name/issues"
+  },
+  "require": {
+    "silverstripe/cms": "~3.1",
+    "silverstripe/framework": "~3.1",
+    "graphiques-digitale/silverstripe-seo-metadata": "dev/master"
+  },
+  "extra": {
+    "installer-name": "silverstripe-seo-icons",
+    "screenshots": [
+      "screenshot-1.png",
+      "screenshot-2.png",
+      "screenshot-3.png"
+    ]
+  }
+}
