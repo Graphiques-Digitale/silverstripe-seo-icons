@@ -9,12 +9,12 @@
     {"name": "Andrew Gerber","email": "atari@graphiquesdigitale.net"}
   ],
   "support": {
-    "issues": "http://github.com/your-vendor-name/module-name/issues"
+    "issues": "https://github.com/Graphiques-Digitale/silverstripe-seo-icons/issues"
   },
   "require": {
     "silverstripe/cms": "~3.1",
     "silverstripe/framework": "~3.1",
-    "graphiques-digitale/silverstripe-seo-metadata": "dev/master"
+    "graphiques-digitale/silverstripe-seo-metadata": "*"
   },
   "extra": {
     "installer-name": "silverstripe-seo-icons",
