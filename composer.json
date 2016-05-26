@@ -29,7 +29,7 @@
     "issues": "https://github.com/Graphiques-Digitale/silverstripe-seo-icons/issues"
   },
   "require": {
-    "graphiques-digitale/silverstripe-seo-metadata": "dev/master"
+    "graphiques-digitale/silverstripe-seo-metadata": "*"
   },
   "extra": {
     "installer-name": "silverstripe-seo-icons",
