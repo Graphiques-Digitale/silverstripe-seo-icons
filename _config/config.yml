@@ -6,7 +6,6 @@ Before:
 SiteConfig:
   extensions:
     - 'SEO_Icons_SiteConfig_DataExtension'
-    
 SiteTree:
   extensions:
     - 'SEO_Icons_SiteTree_DataExtension'
