@@ -4,7 +4,7 @@
 
 This is a modular extension for [graphiques-digitale/silverstripe-seo-metadata](https://github.com/Graphiques-Digitale/silverstripe-seo-metadata)
 
-It enables enhanced **_favicon_** and **_touch icon_** features.
+It enables enhanced **_favicon_** and **_pinned icon_** features.
 
 Favicon inspired by: [audreyr/favicon-cheat-sheet][4], [Jonathan T. Neal - Understand the Favicon][5] and [High Quality Visuals for Pinned Sites in Windows 8][6]
 
@@ -12,11 +12,8 @@ It requires:
 * [`Graphiques-Digitale/silverstripe-seo-metadata`](https://github.com/Graphiques-Digitale/silverstripe-seo-metadata)
 
 It is intended to be used alongside it's siblings:
-* [`Graphiques-Digitale/silverstripe-seo-authorship`](https://github.com/Graphiques-Digitale/silverstripe-seo-authorship)
-* [`Graphiques-Digitale/silverstripe-seo-facebook-insights`](https://github.com/Graphiques-Digitale/silverstripe-seo-facebook-insights)
+* [`Graphiques-Digitale/silverstripe-seo-facebook-domain-insights`](https://github.com/Graphiques-Digitale/silverstripe-seo-facebook-domain-insights)
 * [`Graphiques-Digitale/silverstripe-seo-open-graph`](https://github.com/Graphiques-Digitale/silverstripe-seo-open-graph)
-* [`Graphiques-Digitale/silverstripe-seo-twitter-cards`](https://github.com/Graphiques-Digitale/silverstripe-seo-twitter-cards)
-* [`Graphiques-Digitale/silverstripe-seo-schema-dot-org`](https://github.com/Graphiques-Digitale/silverstripe-seo-schema-dot-org)
 
 These are all optional and fragmented from the alpha version [`SSSEO`](https://github.com/Graphiques-Digitale/SSSEO), which is now redundant.
 
@@ -31,12 +28,18 @@ Also, a good overview: [5 tips for SEO with Silverstripe 3][2].
 #### Composer ####
 
 * `composer require graphiques-digitale/silverstripe-seo-icons`
-* run `~/dev/build/?flush`
+* rebuild using `/dev/build/?flush`
 
 #### From ZIP ####
 
 * Place the extracted folder `silverstripe-seo-icons-{version}` into `silverstripe-seo-icons` in the SilverStripe webroot
-* run `~/dev/build/?flush`
+* rebuild using `/dev/build/?flush`
+
+## CMS Usage ##
+
+All icons are set globally via `/admin/settings/` under the Metadata tab.
+
+It is recommended you simply have a `favicon.ico` file in the root of your website
 
 ## Template Usage ##
 
