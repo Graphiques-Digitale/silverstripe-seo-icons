@@ -30,13 +30,12 @@ class SEO_Icons_SiteTree_DataExtension extends DataExtension
     ------------------------------------------------------------------------------*/
 
     /**
-     * @name updateMetadata
-     *
      * Updates metadata with icons.
      *
      * @param SiteConfig $config
      * @param SiteTree $owner
      * @param $metadata
+     *
      * @return void
      */
     public function updateMetadata(SiteConfig $config, SiteTree $owner, &$metadata)

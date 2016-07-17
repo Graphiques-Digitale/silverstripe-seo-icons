@@ -19,7 +19,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     ------------------------------------------------------------------------------*/
 
     //
-    private static $SEOIconsUpload = 'SEO/Icons/';
+    private static $SEOIconsUpload = 'SEO/SiteConfig/Icons/';
 
     //
     const APPLE_ICON_DEFAULT_BACKGROUND = '000000';
@@ -31,8 +31,6 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     private static $db = array(
         // Pinned Icon Title
         'PiniconTitle' => 'Varchar(128)',
-        // IOS Pinned Icon
-//		'IOSPiniconBackgroundColor' => 'Varchar(6)',
         // Android Pinned Icon
         'AndroidPiniconThemeColor' => 'Varchar(6)',
         // MS Tile
@@ -60,13 +58,13 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     /* Overload Methods
     ------------------------------------------------------------------------------*/
 
-    // CMS Fields
+    /**
+     * Adds tabs & fields to the CMS.
+     *
+     * @param FieldList $fields
+     */
     public function updateCMSFields(FieldList $fields)
     {
-
-        // owner
-        $config = SiteConfig::current_site_config();
-        $owner = $this->owner;
 
         //// Favicons Tab
 
@@ -110,7 +108,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
                 ->addExtraClass('information'),
             UploadField::create('HTML5Favicon', 'Favicon PNG<pre>type: png</pre><pre>size: 192x192 px</pre>')
                 ->setAllowedExtensions(array('png'))
-                ->setFolderName('SiteConfig/seo-icons/')
+                ->setFolderName(self::$SEOIconsUpload)
         ));
 
         //// Pinned Icons Tab
@@ -149,14 +147,8 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
             // icon
             UploadField::create('IOSPinicon', 'iOS Icon<pre>type: png</pre><pre>size: 192x192 px</pre>')
                 ->setAllowedExtensions(array('png'))
-                ->setFolderName('SiteConfig/seo-icons/')
-                ->setDescription('iOS will fill the transparent regions with black by default, so put your own background in!'),
-            // background
-//			TextField::create('IOSPiniconBackgroundColor', 'Background Color<pre>type: hex triplet</pre>')
-//				->setAttribute('placeholder', self::APPLE_ICON_DEFAULT_BACKGROUND)
-//				->setAttribute('size', 6)
-//				->setMaxLength(6)
-//				->setDescription('iOS will fill the transparent regions with black by default, so put your own background in.')
+                ->setFolderName(self::$SEOIconsUpload)
+                ->setDescription('iOS will fill the transparent regions with black by default, so put your own background in!')
         ));
 
         //// Android Pinned Icon
@@ -171,7 +163,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
             // icon
             UploadField::create('AndroidPinicon', 'Android Icon<pre>type: png</pre><pre>size: 192x192 px</pre>')
                 ->setAllowedExtensions(array('png'))
-                ->setFolderName('SiteConfig/seo-icons/'),
+                ->setFolderName(self::$SEOIconsUpload),
             // background
             TextField::create('AndroidPiniconThemeColor', 'Theme Color<pre>type: hex triplet</pre>')
                 ->setAttribute('placeholder', 'none')
@@ -192,7 +184,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
             // icon
             UploadField::create('WindowsPinicon', 'Windows Icon<pre>type: png</pre><pre>size: 192x192 px</pre>')
                 ->setAllowedExtensions(array('png'))
-                ->setFolderName('SiteConfig/seo-icons/'),
+                ->setFolderName(self::$SEOIconsUpload),
             // background
             TextField::create('WindowsPiniconBackgroundColor', 'Background ( Tile ) Color<pre>type: hex triplet</pre>')
                 ->setAttribute('placeholder', 'none')
@@ -204,6 +196,13 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
 
     }
 
+    /**
+     * Generates the Android manifest.json file.
+     *
+     * @todo Information about permissions
+     *
+     * @return void
+     */
     public function onAfterWrite()
     {
 
@@ -212,9 +211,11 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
 
         // regenerate manifest
         if ($this->generateAndroidManifest()) {
-            // @todo SilverStripe success message
+            // SilverStripe success message
+            $this->setMessage('Success', 'Android manifest successfully generated.');
         } else {
-            // @todo SilverStripe failure message
+            // SilverStripe failure message
+            $this->setMessage('Error', 'Android manifest could not be generated, please check permissions on `\manifest.json`');
         }
 
     }
@@ -223,8 +224,13 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     /* Custom Methods
     ------------------------------------------------------------------------------*/
 
-    //// fetch functions
+    //// Fetch functions
 
+    /**
+     * Fetches the pinicon title.
+     *
+     * @return bool|string
+     */
     public function fetchPiniconTitle()
     {
 
@@ -238,6 +244,11 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
 
     }
 
+    /**
+     * Fetches the Android pinicon theme color.
+     *
+     * @return bool|string
+     */
     public function fetchAndroidPiniconThemeColor()
     {
 
@@ -249,6 +260,11 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
 
     }
 
+    /**
+     * Fetches the Windows pinicon background color.
+     *
+     * @return bool|string
+     */
     public function fetchWindowsPiniconBackgroundColor()
     {
 
@@ -260,8 +276,15 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
 
     }
 
-    //// generate functions
+    //// Generate functions
 
+    /**
+     * Generates the android manifest
+     *
+     * @todo check this is working 100%
+     *
+     * @return bool
+     */
     public function generateAndroidManifest()
     {
 
