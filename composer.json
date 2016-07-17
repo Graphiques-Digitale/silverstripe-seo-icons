@@ -18,7 +18,7 @@
     "web",
     "application"
   ],
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "Andrew Gerber",
