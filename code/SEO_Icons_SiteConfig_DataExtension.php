@@ -209,21 +209,8 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
         // parent
         parent::onAfterWrite();
 
-        // @todo Figure out how to pass messages to the CMS tooltip
-        // regenerate manifest
-        if ($this->generateAndroidManifest()) {
-            // SilverStripe success message
-//            Session::set('Message', array(
-//                'MessageType' => 'Success',
-//                'Message' => 'Android manifest successfully generated.'
-//            ));
-        } else {
-            // SilverStripe failure message
-//            Session::set('Message', array(
-//                'MessageType' => 'Error',
-//                'Message' => 'Android manifest could not be generated, please check permissions on `\manifest.json`'
-//            ));
-        }
+        // @todo Add success & error states + messages
+        $this->generateAndroidManifest();
 
     }
 
