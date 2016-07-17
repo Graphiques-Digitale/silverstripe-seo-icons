@@ -1,4 +1,4 @@
-![Screenshot](screenshot-1.png)
+[![Build Status](https://travis-ci.org/Graphiques-Digitale/silverstripe-seo-icons.svg?branch=master)](https://travis-ci.org/Graphiques-Digitale/silverstripe-seo-icons) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Graphiques-Digitale/silverstripe-seo-icons/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Graphiques-Digitale/silverstripe-seo-icons/?branch=master)
 
 ## Overview ##
 
@@ -101,7 +101,10 @@ BSD-3-Clause license
 See @ [Why BSD?][12]
 
 
+![Screenshot](screenshot-1.png)
+
 ![Screenshot](screenshot-2.png)
+
 ![Screenshot](screenshot-3.png)
 
 
