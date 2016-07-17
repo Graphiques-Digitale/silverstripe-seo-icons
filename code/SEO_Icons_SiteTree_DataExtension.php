@@ -101,31 +101,31 @@ class SEO_Icons_SiteTree_DataExtension extends DataExtension
         //// iOS Pinned Icon
 
         // For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(57, 57)->getAbsoluteURL(), 'image/png'); // 57×57
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(57, 57)->getAbsoluteURL(), 'image/png'); // 57×57
 
         // @todo: What is this for ??
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(60, 60)->getAbsoluteURL(), 'image/png', '60x60');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(60, 60)->getAbsoluteURL(), 'image/png', '60x60');
 
         // For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(72, 72)->getAbsoluteURL(), 'image/png', '72x72');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(72, 72)->getAbsoluteURL(), 'image/png', '72x72');
 
         // For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(76, 76)->getAbsoluteURL(), 'image/png', '76x76');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(76, 76)->getAbsoluteURL(), 'image/png', '76x76');
 
         // For iPhone with @2× display running iOS ≤ 6
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(114, 114)->getAbsoluteURL(), 'image/png', '114x114');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(114, 114)->getAbsoluteURL(), 'image/png', '114x114');
 
         // For iPhone with @2× display running iOS ≥ 7
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(120, 120)->getAbsoluteURL(), 'image/png', '120x120');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(120, 120)->getAbsoluteURL(), 'image/png', '120x120');
 
         // For iPad with @2× display running iOS ≤ 6
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(144, 144)->getAbsoluteURL(), 'image/png', '144x144');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(144, 144)->getAbsoluteURL(), 'image/png', '144x144');
 
         // For iPad with @2× display running iOS ≥ 7
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(152, 152)->getAbsoluteURL(), 'image/png', '152x152');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(152, 152)->getAbsoluteURL(), 'image/png', '152x152');
 
         // For iPhone 6 Plus with @3× display
-        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Pad(180, 180)->getAbsoluteURL(), 'image/png', '180x180');
+        $metadata .= $owner->MarkupLink('apple-touch-icon', $IOSPinicon->Fill(180, 180)->getAbsoluteURL(), 'image/png', '180x180');
 
     }
 
@@ -145,22 +145,22 @@ class SEO_Icons_SiteTree_DataExtension extends DataExtension
 
 //			// Android Chrome 32
         // @todo: Is the Android Chrome 32 196x196 px icon fully redundant ??
-//			$metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(196,196)->getAbsoluteURL(), 'image/png', '196x196');
+//			$metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(196,196)->getAbsoluteURL(), 'image/png', '196x196');
 
         // Android Chrome 37+ / HTML5 spec
-        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(192, 192)->getAbsoluteURL(), 'image/png', '192x192');
+        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(192, 192)->getAbsoluteURL(), 'image/png', '192x192');
 
         // Android Chrome 37+ / HTML5 spec
-        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(128, 128)->getAbsoluteURL(), 'image/png', '128x128');
+        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(128, 128)->getAbsoluteURL(), 'image/png', '128x128');
 
         // For Google TV
-        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(96, 96)->getAbsoluteURL(), 'image/png', '96x96');
+        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(96, 96)->getAbsoluteURL(), 'image/png', '96x96');
 
         // For Safari on Mac OS
-        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(32, 32)->getAbsoluteURL(), 'image/png', '32x32');
+        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(32, 32)->getAbsoluteURL(), 'image/png', '32x32');
 
         // The classic favicon, displayed in the tabs
-        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->SetSize(16, 16)->getAbsoluteURL(), 'image/png', '16x16');
+        $metadata .= $owner->MarkupLink('icon', $HTML5Favicon->Fill(16, 16)->getAbsoluteURL(), 'image/png', '16x16');
 
     }
 
