@@ -94,6 +94,13 @@ Issues are tracked on GitHub @ [Issue Tracker](https://github.com/Graphiques-Dig
 
 Please get in touch @ [`hello@graphiquesdigitale.net`](mailto:hello@graphiquesdigitale.net) if you have any extertise in any of these SEO module's areas and would like to help ~ they're a lot to maintain, they should be improved continually as HTML evolves and I'm sure they can generally be improved upon by field experts.
 
+## License ##
+
+BSD-3-Clause license
+
+See @ [Why BSD?][12]
+
+
 ![Screenshot](screenshot-2.png)
 ![Screenshot](screenshot-3.png)
 
@@ -109,3 +116,4 @@ Please get in touch @ [`hello@graphiquesdigitale.net`](mailto:hello@graphiquesdi
 [9]: https://dev.twitter.com/cards/overview
 [10]: https://developers.google.com/+/web/snippet/
 [11]: https://mathiasbynens.be/notes/touch-icons
+[12]: https://www.silverstripe.org/blog/why-bsd/
