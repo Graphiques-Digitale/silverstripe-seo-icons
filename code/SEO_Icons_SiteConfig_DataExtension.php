@@ -212,10 +212,16 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
         // regenerate manifest
         if ($this->generateAndroidManifest()) {
             // SilverStripe success message
-            $this->setMessage('Success', 'Android manifest successfully generated.');
+            Session::set('Message', array(
+                'MessageType' => 'Success',
+                'Message' => 'Android manifest successfully generated.'
+            ));
         } else {
             // SilverStripe failure message
-            $this->setMessage('Error', 'Android manifest could not be generated, please check permissions on `\manifest.json`');
+            Session::set('Message', array(
+                'MessageType' => 'Error',
+                'Message' => 'Android manifest could not be generated, please check permissions on `\manifest.json`'
+            ));
         }
 
     }
@@ -247,7 +253,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     /**
      * Fetches the Android pinicon theme color.
      *
-     * @return bool|string
+     * @return string|false
      */
     public function fetchAndroidPiniconThemeColor()
     {
@@ -263,7 +269,7 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
     /**
      * Fetches the Windows pinicon background color.
      *
-     * @return bool|string
+     * @return string|false
      */
     public function fetchWindowsPiniconBackgroundColor()
     {
@@ -353,18 +359,18 @@ class SEO_Icons_SiteConfig_DataExtension extends DataExtension
             ));
 
             // create file
-            $bytes = file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/manifest.json', json_encode($manifest));
+            $bytes = file_put_contents(Director::baseFolder() . '/manifest.json', json_encode($manifest));
 
             //
             if ($bytes !== false) {
                 // success
                 return true;
-            } else {
-                // failure
-                return false;
             }
 
         }
+
+        // default return
+        return false;
 
     }
 
