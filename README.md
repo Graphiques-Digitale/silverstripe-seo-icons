@@ -6,22 +6,22 @@ This is a modular extension for [graphiques-digitale/silverstripe-seo-metadata](
 
 It enables enhanced **_favicon_** and **_pinned icon_** features.
 
-Favicon inspired by: [audreyr/favicon-cheat-sheet][4], [Jonathan T. Neal - Understand the Favicon][5] and [High Quality Visuals for Pinned Sites in Windows 8][6]
+Favicon inspired by: [audreyr/favicon-cheat-sheet](https://github.com/audreyr/favicon-cheat-sheet), [Jonathan T. Neal - Understand the Favicon](http://www.jonathantneal.com/blog/understand-the-favicon/) and [High Quality Visuals for Pinned Sites in Windows 8](http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx)
 
 It requires:
-* [`Graphiques-Digitale/silverstripe-seo-metadata`](https://github.com/Graphiques-Digitale/silverstripe-seo-metadata)
+* [`Graphiques-Digitale/silverstripe-seo-metadata`][2]
 
 It is intended to be used alongside it's siblings:
-* [`Graphiques-Digitale/silverstripe-seo-facebook-domain-insights`](https://github.com/Graphiques-Digitale/silverstripe-seo-facebook-domain-insights)
-* [`Graphiques-Digitale/silverstripe-seo-open-graph`](https://github.com/Graphiques-Digitale/silverstripe-seo-open-graph)
+* [`Graphiques-Digitale/silverstripe-seo-facebook-domain-insights`][4]
+* [`Graphiques-Digitale/silverstripe-seo-open-graph`][5]
 
-These are all optional and fragmented from the alpha version [`SSSEO`](https://github.com/Graphiques-Digitale/SSSEO), which is now redundant.
+These are all optional and fragmented from the alpha version [`SSSEO`][1], which is now redundant.
 
-The whole module collection is based largely on [18 Meta Tags Every Webpage Should Have in 2013][1].
+The whole module collection is based largely on [18 Meta Tags Every Webpage Should Have in 2013][6].
 
-Touch icons inspired by: [Everything you always wanted to know about touch icons][11]
+Also, a good overview: [5 tips for SEO with Silverstripe 3][7].
 
-Also, a good overview: [5 tips for SEO with Silverstripe 3][2].
+Touch icons inspired by: [Everything you always wanted to know about touch icons](https://mathiasbynens.be/notes/touch-icons)
 
 ## Installation ##
 
@@ -98,7 +98,7 @@ Please get in touch @ [`hello@graphiquesdigitale.net`](mailto:hello@graphiquesdi
 
 BSD-3-Clause license
 
-See @ [Why BSD?][12]
+See @ [Why BSD?][8]
 
 
 ![Screenshot](screenshot-1.png)
@@ -108,15 +108,11 @@ See @ [Why BSD?][12]
 ![Screenshot](screenshot-3.png)
 
 
-[1]: https://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013
-[2]: http://www.silverstripe.org/blog/5-tips-for-seo-with-silverstripe-3-/
-[3]: http://moz.com/learn/seo/title-tag
-[4]: https://github.com/audreyr/favicon-cheat-sheet
-[5]: http://www.jonathantneal.com/blog/understand-the-favicon/
-[6]: http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx
-[7]: https://developers.facebook.com/docs/platforminsights/domains
-[8]: http://ogp.me
-[9]: https://dev.twitter.com/cards/overview
-[10]: https://developers.google.com/+/web/snippet/
-[11]: https://mathiasbynens.be/notes/touch-icons
-[12]: https://www.silverstripe.org/blog/why-bsd/
+[1]: https://github.com/Graphiques-Digitale/SSSEO
+[2]: https://github.com/Graphiques-Digitale/silverstripe-seo-metadata
+[3]: https://github.com/Graphiques-Digitale/silverstripe-seo-icons
+[4]: https://github.com/Graphiques-Digitale/silverstripe-seo-facebook-domain-insights
+[5]: https://github.com/Graphiques-Digitale/silverstripe-seo-open-graph
+[6]: https://www.iacquire.com/blog/18-meta-tags-every-webpage-should-have-in-2013
+[7]: http://www.silverstripe.org/blog/5-tips-for-seo-with-silverstripe-3-/
+[8]: https://www.silverstripe.org/blog/why-bsd/
